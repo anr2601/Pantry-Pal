@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Minimal Manifest",
+    "version": "1.0.0",
+    "description": "A basic example extension with only required keys",
+    "action": {
+        "default_popup":"index.html"
+    },
+    "oauth2": {
+        "client_id": "767304445720-u2h3eppc11qrao37v16102efn5e7vptr.apps.googleusercontent.com",
+        "scopes": ["https://www.googleapis.com/auth/userinfo.profile"]
+    },
+    "permissions": ["tabs", "identity", "activeTab", "storage"]
+  }
+  

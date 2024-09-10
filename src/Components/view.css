@@ -1,0 +1,49 @@
+/* styles.css or your component's CSS file */
+.scroll-container {
+    height: 140px; /* Adjust height to fit 3 items */
+    overflow:hidden; /* Enable vertical scrolling */ /* Optional: border for visibility */
+  }
+  
+
+
+  .scroll-container:hover {
+    overflow-y: auto; /* Show vertical scrollbar on hover */
+  }
+
+  .scroll-container::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s; 
+  }
+
+  .allergies-container.show-scroll .allergies-list {
+    max-height: 120px; /* Adjust based on your design */
+    padding-right: 15px; /* Add padding to accommodate scrollbar */
+  }
+
+  .scroll-container:hover::-webkit-scrollbar {
+    opacity: 1; /* Show scrollbar on hover */
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar thumb on hover */
+  }  
+  
+  .scroll-item {
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .scroll-container ul,
+.scroll-container li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
