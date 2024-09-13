@@ -14,6 +14,11 @@ const login = () => {
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState<FormData>({ user: '', pass: '' });
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+    
+    const togglePasswordVisibility = () => {
+      setIsPasswordVisible(!isPasswordVisible);
+    };
 
 
 
@@ -22,6 +27,8 @@ const login = () => {
         
         const username = formData.user;
         const password = formData.pass;
+
+        
     
         try {
 
@@ -80,8 +87,8 @@ const login = () => {
                     </label>
                     <br/>
                     <br/>
-                    <label>
-                        Password: <input required type="text" name="pass" value={formData.pass} onChange={handleChange} />
+                    <label style={{marginLeft:'22px', display:'flex'}}>
+                        Password: <input required  type={isPasswordVisible ? 'text' : 'password'} name="pass" value={formData.pass} style={{marginLeft:'5px', marginTop:0, marginBottom:0, paddingTop:0, paddingBottom:0}} onChange={handleChange} /><button onClick={togglePasswordVisibility} style={{background:'transparent', marginRight:0, paddingRight:0, marginLeft:'5px', paddingLeft:0, marginTop:0, marginBottom:0, paddingTop:0, paddingBottom:0}}>{isPasswordVisible ? '🙈' : '👁️'}</button>
                     </label>
                     
                     <br/>

@@ -18,6 +18,12 @@ const signup = () => {
 
     const [message, setMessage] = useState('');
 
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+    
+    const togglePasswordVisibility = () => {
+      setIsPasswordVisible(!isPasswordVisible);
+    };
+
       const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
         const { name, value } = event.target;
         setFormData((prevData) => ({
@@ -87,8 +93,8 @@ const signup = () => {
                     
                     <br/>
                     <br/>
-                    <label>
-                        Password: <input required type="text" name="pass" value={formData.pass} onChange={handleChange} />
+                    <label style={{marginLeft:'22px', display:'flex', marginTop:0, marginBottom:0}}>
+                        Password: <input required type={isPasswordVisible ? 'text' : 'password'} name="pass" value={formData.pass} style={{marginLeft:'5px', marginBottom:'0px', paddingTop:0, paddingBottom:0}} onChange={handleChange} /><button onClick={togglePasswordVisibility} style={{background:'transparent', marginRight:0, paddingRight:0, marginLeft:'5px', paddingLeft:0, marginBottom:0, paddingTop:0, paddingBottom:0}}>{isPasswordVisible ? '🙈' : '👁️'}</button>
                     </label>
                     
                     <br/>
