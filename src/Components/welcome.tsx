@@ -15,6 +15,8 @@ const welcome = () => {
       });
     };
 
+    
+
     const loadUserFromToken = () => {
         chrome.storage.local.get(['token'], (result) => {
           const token = result.token;
@@ -66,3 +68,6 @@ const welcome = () => {
 }
 
 export default welcome
+
+
+//#productDetails_techSpec_section_1 > tbody > tr:nth-child(12) > td

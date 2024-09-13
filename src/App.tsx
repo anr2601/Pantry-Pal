@@ -4,6 +4,7 @@ import SignUp from './Components/signup';
 import Home from './Components/home';
 import Welcome from './Components/welcome'
 import View from './Components/view'
+import Scrape from './Components/scrape'
 import {useState, useEffect} from 'react'
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 
@@ -34,7 +35,7 @@ function App() {
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/welcome" element={<Welcome/>}/>
             <Route path="/view" element={<View/>}/>
-            <Route path="/scrape" element={<Welcome/>}/>
+            <Route path="/scrape" element={<Scrape/>}/>
           </Routes>
         </HashRouter>
         
