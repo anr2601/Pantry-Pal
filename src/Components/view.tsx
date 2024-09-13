@@ -15,7 +15,7 @@ const view = () => {
 
     const removeAllergy = async (allergy: string) => {
       try {
-        const response = await fetch('http://localhost:3000/api/removeallergy', {
+        const response = await fetch('http://pantry-pal-backend-ajai.onrender.com/api/removeallergy', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

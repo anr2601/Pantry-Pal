@@ -34,7 +34,7 @@ const scrape = () => {
 
             console.log(user);
             // Send the URL to the Express server
-            const response = await fetch('http://localhost:3000/api/scrape', {
+            const response = await fetch('http://pantry-pal-backend-ajai.onrender.com/api/scrape', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
