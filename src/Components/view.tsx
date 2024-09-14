@@ -35,7 +35,7 @@ const view = () => {
     const addAllergy = async () => {
       if (newAllergy.trim()) {
         try {
-          await fetch('http://localhost:3000/api/addallergy', {
+          await fetch('http://pantry-pal-backend-ajai.onrender.com/api/addallergy', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ const view = () => {
         try {
 
           console.log(username)
-          const response = await fetch(`http://localhost:3000/api/allergies`, {
+          const response = await fetch(`http://pantry-pal-backend-ajai.onrender.com/api/allergies`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({username}),

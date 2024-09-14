@@ -86,7 +86,7 @@ const signup = () => {
                     <h2>Sign Up</h2>
                     <br/>
                     <br/>
-                <form onSubmit={handleSignup} style={{marginBottom:'30px'}}>
+                <form onSubmit={handleSignup}>
                     <label>
                         Username: <input required type="text" name="user" value={formData.user} onChange={handleChange} />
                     </label>
